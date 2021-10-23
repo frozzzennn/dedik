@@ -42,7 +42,7 @@ def question(message):
         keyboard2.row('Назад')
         bot.send_message(message.chat.id, "Ваш вопрос отправлен администрации", reply_markup=keyboard2)
         bot.register_next_step_handler(message, back)
-   elif message.text.lower() == "назад":
+    elif message.text.lower() == "назад":
         keyboard = telebot.types.ReplyKeyboardMarkup(True)
         keyboard.row('Оформить заказ', 'Помощь')
         bot.send_message(message.chat.id, 'Привет! Ты попал в бота для оформления заказа на дедик.\nДля оформления заказа нажми на кнопку "Оформить заказ".\nТекущие расценки:\n1 ядро/1 ГБ ОЗУ - 65 рублей\n2 ядра/4 ГБ ОЗУ - 125 рублей\n2 ядра/8 ГБ ОЗУ - 200 рублей\n4 ядра/16 ГБ ОЗУ - 325 рублей\n Также есть и другие, цена договорная\nВ зависимости от ГЕО цена может увеличиваться\nЕсть вопросы? Нажми на кнопку "Помощь"', reply_markup=keyboard)
